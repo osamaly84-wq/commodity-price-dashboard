@@ -143,7 +143,7 @@ except Exception as exc:  # noqa: BLE001
 # Dataset preview
 # --------------------------------------------------------------------------- #
 st.subheader("📂 Dataset Preview")
-st.dataframe(df.head(10), use_container_width=True)
+st.dataframe(df.head(10), width="stretch")
 
 
 # --------------------------------------------------------------------------- #
@@ -160,7 +160,7 @@ with col_a:
         step=1,
     )
 with col_b:
-    predict_clicked = st.button("Predict", use_container_width=True)
+    predict_clicked = st.button("Predict", width="stretch")
 
 if not healthy:
     st.warning(
